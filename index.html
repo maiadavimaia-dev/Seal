@@ -8,110 +8,95 @@
 <style>
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #c9d6ff, #e2e2e2);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    height: 100vh;
 }
 
 .container {
     background: white;
-    max-width: 650px;
-    width: 100%;
-    padding: 35px;
-    border-radius: 25px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    width: 90%;
+    max-width: 600px;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     text-align: center;
-    animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {opacity: 0; transform: translateY(20px);}
-    to {opacity: 1; transform: translateY(0);}
 }
 
 h1 {
-    margin-top: 0;
-    color: #444;
+    margin-bottom: 10px;
+    color: #333;
 }
 
-.frase {
-    font-size: 18px;
-    margin-bottom: 20px;
+.subtitle {
     color: #666;
+    margin-bottom: 20px;
 }
 
 .profile {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #25D366;
     margin-bottom: 20px;
-}
-
-.qr {
-    width: 220px;
-    margin: 20px 0;
+    border: 4px solid #4CAF50;
 }
 
 .section-title {
-    margin-top: 30px;
-    font-size: 20px;
-    color: #555;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #444;
 }
 
 ul {
-    text-align: left;
-    padding-left: 25px;
+    list-style: none;
+    padding: 0;
 }
 
-li {
-    margin-bottom: 8px;
+ul li {
+    padding: 6px 0;
 }
 
-.preco-box {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 15px;
+.price-box {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
     margin-top: 15px;
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
 }
 
-.tabela-preco {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
 }
 
-.tabela-preco td {
-    padding: 10px;
-    border-bottom: 1px solid #eee;
-}
-
-.valor {
-    text-align: right;
+.price {
+    color: #2ecc71;
     font-weight: bold;
-    color: #25D366;
 }
 
-.btn {
+.qr {
+    width: 120px;
+    margin-top: 15px;
+}
+
+.button {
     display: inline-block;
-    margin-top: 30px;
-    padding: 14px 28px;
+    margin-top: 20px;
     background: #25D366;
     color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
     text-decoration: none;
-    border-radius: 12px;
     font-weight: bold;
-    transition: 0.3s;
 }
 
-.btn:hover {
+.button:hover {
     background: #1ebe5d;
-    transform: scale(1.05);
 }
 </style>
 </head>
@@ -120,51 +105,38 @@ li {
 
 <div class="container">
 
-<h1>🌸 R&F Informática 🌸</h1>
+    <h1>R&F Informática</h1>
+    <p class="subtitle">Se precisar de impressão ou xerox, entre em contato!</p>
 
-<p class="frase">
-Se precisar de impressão ou xerox, me chame no contato!
-</p>
+    <img src="foto.png" class="profile">
 
-<img src="foto.png" alt="Foto de Perfil" class="profile">
+    <div class="section-title">Nossos Serviços</div>
+    <ul>
+        <li>Impressão Preto e Branco</li>
+        <li>Impressão Colorida</li>
+        <li>Xerox</li>
+        <li>Encadernação</li>
+        <li>Digitalização</li>
+        <li>Serviços de Informática</li>
+    </ul>
 
-<img src="qr.png" alt="QR Code WhatsApp" class="qr">
+    <div class="section-title">Tabela de Preços</div>
 
-<h2 class="section-title">🖨️ Nossos Serviços</h2>
-<ul>
-<li>Impressão Preto e Branco</li>
-<li>Impressão Colorida</li>
-<li>Xerox</li>
-<li>Encadernação</li>
-<li>Digitalização</li>
-<li>Serviços de Informática</li>
-</ul>
+    <div class="price-box">
+        <div class="price-item">
+            <span>Folha A4 Comum</span>
+            <span class="price">R$ 1,00</span>
+        </div>
+        <div class="price-item">
+            <span>Papel Fotográfico A4</span>
+            <span class="price">R$ 3,00</span>
+        </div>
+    </div>
 
-<h2 class="section-title">💰 Tabela de Preços</h2>
+    <img src="qr.png" class="qr">
 
-<div class="preco-box">
-<table class="tabela-preco">
-<tr>
-<td>Folha de Papel A4 Comum</td>
-<td class="valor">R$ 1,00 / folha</td>
-</tr>
-<tr>
-<td>Papel Fotográfico A4</td>
-<td class="valor">R$ 3,00 / folha</td>
-</tr>
-</table>
-
-<p style="font-size: 14px; color: #666; margin-top:15px;">
-Os valores podem variar dependendo da quantidade e tipo de impressão.  
-Entre em contato para orçamento personalizado.
-</p>
-</div>
-
-<a class="btn" 
-href="https://wa.me/5511958483045?text=Ol%C3%A1%21%20gostaria%20de%20fazer%20uma%20impress%C3%A3o" 
-target="_blank">
-💬 Falar no WhatsApp
-</a>
+    <br>
+    <a href="#" class="button">Falar no WhatsApp</a>
 
 </div>
 
